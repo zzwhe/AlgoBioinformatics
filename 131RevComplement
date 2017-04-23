@@ -1,0 +1,22 @@
+# Reverse Complement Problem: 
+# Find the reverse complement of a DNA string.
+# Input: A DNA string Pattern. 
+#        Sample Input: AAAACCCGGT
+# Output: Pattern, the reverse complement of Pattern.
+#        Sample Output: ACCGGGTTTT
+
+def compDNA(dna):
+    theDna = ""
+    for i in range(len(dna)):
+        if dna[i] == "A":
+            theDna = theDna + "T"
+        elif dna[i] == "C":
+            theDna = theDna + "G"
+        elif dna[i] == "T":
+            theDna = theDna + "A"
+        elif dna[i] == "G":
+            theDna = theDna + "C"
+    return theDna[::-1]
+
+print (compDNA("AAAACCCGGT"))    
+
